@@ -1,4 +1,4 @@
-# Hover Windows Service
+# Hover Windows
 Hover Windows is a C# WPF application that serves as a smart home application for the Hover backend. Hover is a Spring Boot backend that acts as the central hub for managing and monitoring smart home devices. With Hover Windows, users can easily control and monitor their smart home devices from a single application.
 
 ## Features (In Progress)
