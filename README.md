@@ -1,5 +1,5 @@
 # Hover Windows
-Hover Windows is a C# WPF application that serves as a smart home application for the Hover backend. Hover is a Spring Boot backend that acts as the central hub for managing and monitoring smart home devices. With Hover Windows, users can easily control and monitor their smart home devices from a single application.
+Hover Windows is a C# WPF application that serves as a smart home application for Hover. Hover is a Spring Boot backend that acts as the central hub for managing and monitoring smart home devices. With Hover Windows, users can easily control and monitor their smart home devices from a single application.
 
 ## Features (In Progress)
 * User-friendly interface for controlling and monitoring smart home devices.
@@ -15,7 +15,7 @@ Hover Windows is a C# WPF application that serves as a smart home application fo
 
 ## Installation
 * Clone or download the Hover Windows repository to your local machine.
-* Open the solution file HoverWindows.sln in Visual Studio.
+* Open the solution file Hover.sln in Visual Studio.
 * Build the solution.
 * Run the application.
 
@@ -29,9 +29,6 @@ Hover Windows is built on the .NET 6.0 framework and targets Windows 10 version 
 
 ## Authors
 Hover was developed by Thabang Mmakgatla.
-
-## Acknowledgments
-Special thanks to Razer for providing the Chroma REST SDK API.
 
 ## License
 This project is licensed under the MIT license. See the LICENSE file for details.
