@@ -1,17 +1,15 @@
 # Hover Windows
-Hover Windows is a C# WPF application that serves as a smart home application for Hover. Hover is a Spring Boot backend that acts as the central hub for managing and monitoring smart home devices. With Hover Windows, users can easily control and monitor their smart home devices from a single application.
+Hover Windows is a desktop application that provides a user-friendly interface that enables easy control and monitoring of smart home devices from a Windows device. With Hover, you can manage your connected devices from the convenience of your Windows device.
 
-## Features (In Progress)
-* User-friendly interface for controlling and monitoring smart home devices.
-* Real-time updates of device status.
-* Ability to turn devices on and off.
-* Device settings customization.
-* Toast notifications for device status updates.
+## Features
+* User-friendly interface for controlling and monitoring smart home devices. ⚠️
+* Real-time updates of device status.⚠️
+* Ability to turn devices on and off.⚠️
+* Toast notifications for device status updates. ⚠️
 
-## Requirements
-* Windows 10 or higher operating system
-* .NET 6.0 runtime or higher
-* Access to the Hover backend
+## Technologies Used
+* Windows OS.
+* .NET 6.
 
 ## Installation
 * Clone or download the Hover Windows repository to your local machine.
@@ -20,7 +18,7 @@ Hover Windows is a C# WPF application that serves as a smart home application fo
 * Run the application.
 
 ## Usage
-Upon launching Hover Windows, you will be prompted to enter your credentials for the Hover backend. Once you have successfully logged in, you will be taken to the main dashboard.
+Upon launching Hover Windows, you will be prompted to enter your credentials for Hover. Once you have successfully logged in, you will be taken to the main dashboard.
 
 From the dashboard, you can view and control all of your smart home devices that are connected to Hover. You can view the current status of each device, turn devices on or off, and adjust device settings.
 
@@ -28,7 +26,7 @@ From the dashboard, you can view and control all of your smart home devices that
 Hover Windows is built on the .NET 6.0 framework and targets Windows 10 version 22621.0. The target framework moniker (TFM) for Hover Windows is net6.0-windows10.0.22621.0 And the supported Windows 10 version starts from 10.0.19041.0
 
 ## Authors
-Hover was developed by Thabang Mmakgatla.
+Hover Windows was developed by Thabang Mmakgatla.
 
 ## License
-This project is licensed under the MIT license. See the LICENSE file for details.
+Hover Windows is licensed under the MIT license. See the LICENSE file for details.
