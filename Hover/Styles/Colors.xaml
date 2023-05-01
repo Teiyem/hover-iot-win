@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ColorPrimary">#ffffff</Color>
+    <Color x:Key="ColorPrimaryLight">#ECF0F3</Color>
+    <Color x:Key="ColorPrimaryDark">#383838</Color>
+    <Color x:Key="ColorSecondary">#282828</Color>
+    <Color x:Key="ColorSecondaryLight">#c7c7c7</Color>
+    <Color x:Key="ColorSecondaryDark">#232323</Color>
+    <Color x:Key="ColorAccent">#ff9f00</Color>
+    <Color x:Key="ColorPrimaryText">#000000</Color>
+    <Color x:Key="ColorSecondaryText">#ffffff</Color>
+    <Color x:Key="ColorAltTextColor">#ff9f00</Color>
+    <Color x:Key="ColorWarn">Red</Color>
+    <Color x:Key="ColorDisabled">#333436</Color>
+    <Color x:Key="ColorWhite">#ffffff</Color>
+    <Color x:Key="TransparentColor">#00000000</Color>
+
+    <SolidColorBrush x:Key="ColorPrimaryBrush" Color="{StaticResource ColorPrimary}" />
+    <SolidColorBrush x:Key="ColorPrimaryLightBrush" Color="{StaticResource ColorPrimaryLight}" />
+    <SolidColorBrush x:Key="ColorPrimaryDarkBrush" Color="{StaticResource ColorPrimaryDark}" />
+    <SolidColorBrush x:Key="ColorSecondaryBrush" Color="{StaticResource ColorSecondary}" />
+    <SolidColorBrush x:Key="ColorSecondaryLightBrush" Color="{StaticResource ColorSecondaryLight}" />
+    <SolidColorBrush x:Key="ColorSecondaryDarkBrush" Color="{StaticResource ColorSecondaryDark}" />
+    <SolidColorBrush x:Key="ColorAccentBrush" Color="{StaticResource ColorAccent}" />
+    <SolidColorBrush x:Key="ColorTextPrimaryBrush" Color="{StaticResource ColorPrimaryText}" />
+    <SolidColorBrush x:Key="ColorTextSecondaryBrush" Color="{StaticResource ColorSecondaryText}" />
+    <SolidColorBrush x:Key="ColorAltSecondaryBrush" Color="{StaticResource ColorAltTextColor}" />
+    <SolidColorBrush x:Key="ColorWarnBrush" Color="{StaticResource ColorWarn}" />
+    <SolidColorBrush x:Key="ColorDisabledBrush" Color="{StaticResource ColorDisabled}"/>
+
+</ResourceDictionary>

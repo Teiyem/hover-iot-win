@@ -1,0 +1,72 @@
+﻿<views:BasePage x:Class="Hover.Views.RegisterPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:attachedProperties="clr-namespace:Hover.AttachedProperties"
+             xmlns:viewModels="clr-namespace:Hover.ViewModels"
+             xmlns:views="clr-namespace:Hover.Views"
+             mc:Ignorable="d"
+             x:Name="Page"
+             d:DataContext="{d:DesignInstance Type=viewModels:RegisterViewModel}"
+             d:DesignHeight="700" d:DesignWidth="700">
+
+    <Border>
+        <Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                          >
+                <Border Background="{StaticResource ColorPrimaryBrush}"
+                            BorderThickness="0.5"
+                            BorderBrush="{StaticResource ColorPrimaryBrush}"
+                            CornerRadius="10"
+                            Padding="15 50 15 15"
+                            Height="480"
+                            Width="330"
+                            Margin="50 50 50 0">
+
+                        <StackPanel>
+                            <!-- Register header -->
+                            <TextBlock Text="Register" 
+                                       Style="{StaticResource H1}"
+                                       Foreground="{StaticResource ColorAccentBrush}"
+                                   Margin="0 0 0 20"/>
+
+                            <!-- Name -->
+                            <TextBox 
+                                Style="{StaticResource FormInput}" 
+                                Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" 
+                                Tag="Name" />
+
+                            <!-- Username -->
+                            <TextBox 
+                                Style="{StaticResource FormInput}"
+                                Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" 
+                                attachedProperties:IsFocusedProperty.Value="True"
+                                Tag="Username" />
+
+                            <!-- Password -->
+                            <PasswordBox x:Name="PasswordText" Tag="Password" Margin="0 5 0 30" />
+
+                            <!-- Register button -->
+                            <Button Content="Register" 
+                                    IsDefault="True"
+                                    attachedProperties:IsBusyProperty.Value="{Binding RegisterIsRunning}"
+                                    Command="{Binding Register}"
+                                    CommandParameter="{Binding ElementName=Page}" 
+                                    HorizontalAlignment="Center"
+                                    Style="{StaticResource RegularButton}"/>
+
+                            <Button 
+                                Style="{StaticResource TextButton}"
+                                Padding="0"
+                                Margin="0 30 0 0"
+                                Content="Or, I already have an account..." 
+                                HorizontalAlignment="Center" 
+                                Command="{Binding Login}"/>
+
+                        </StackPanel>
+                    </Border>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</views:BasePage>

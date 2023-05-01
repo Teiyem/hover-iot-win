@@ -3,11 +3,148 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:Hover.ViewModels" 
+        xmlns:converters="clr-namespace:Hover.Converters"
+        xmlns:attachedProperties="clr-namespace:Hover.AttachedProperties" 
+        xmlns:hover="clr-namespace:Hover"
+        d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
         mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
         MinHeight="600" MinWidth="900"
-        Icon="Assets/hover_black_small.ico"
+        Icon="Assets/hover_white_small.ico"
         Title="Hover" Height="650" Width="900">
-    <Grid>
+    <Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
 
-    </Grid>
+            <Border Padding="{Binding OuterMarginSize}" BorderThickness="{Binding FlatBorderThickness}">
+
+                <!-- Main window outline -->
+                <Grid>
+
+                    <!-- The main window content -->
+                    <Border BorderThickness="{Binding BeingMoved, Converter={converters:BoolToThicknessConverter}}"
+                            Panel.ZIndex="2"
+                            CornerRadius="{Binding WindowCornerRadius}"
+                            BorderBrush="{StaticResource ColorAccentBrush}" />
+
+                    <!-- Opacity Mask -->
+                    <Border x:Name="WindowContainer"
+                            Background="{StaticResource ColorPrimaryBrush}"
+                            CornerRadius="{Binding WindowCornerRadius}" />
+
+                    <Border CornerRadius="{Binding WindowCornerRadius}"
+                            Background="{StaticResource ColorPrimaryBrush}">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="0" Opacity="0.3" />
+                        </Border.Effect>
+                    </Border>
+
+                    <!-- The main window content -->
+                    <Grid>
+                        <Grid.OpacityMask>
+                            <VisualBrush Visual="{Binding ElementName=WindowContainer}" />
+                        </Grid.OpacityMask>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=30}" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Title Bar -->
+                        <Grid Grid.Column="0" Panel.ZIndex="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="0.2*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Button Style="{StaticResource SystemIconButton}" Command="{Binding Menu}">
+                                <Image Source="/Assets/hover_black_small.ico" />
+                            </Button>
+
+                            <TextBlock FontFamily="{StaticResource LatoBold}" 
+                                       FontSize="{StaticResource Medium}" FontWeight="DemiBold"
+                                       VerticalAlignment="Center"
+                                       Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" >
+                                <Run Text="H" Foreground="{StaticResource ColorTextPrimaryBrush}" />
+                                <Run Text="O" Foreground="{StaticResource ColorTextPrimaryBrush}" />
+                                <Run Text="V" Foreground="{StaticResource ColorTextPrimaryBrush}" />
+                                <Run Text="E" Foreground="{StaticResource ColorTextPrimaryBrush}" />
+                                <Run Text="R" Foreground="{StaticResource ColorTextPrimaryBrush}" />
+                            </TextBlock>
+
+                            <Grid Grid.Column="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Command="{Binding Minimize}" Style="{StaticResource WindowControlButton}" Content="_" />
+                                <Button Grid.Column="1" Command="{Binding Maximize}" Style="{StaticResource WindowControlButton}" Content="[ ]" />
+                                <Button Grid.Column="2" Command="{Binding Close}" Style="{StaticResource WindowCloseButton}" Content="X" />
+                            </Grid>
+
+                        </Grid>
+
+                        <!-- Drop Shadow -->
+                        <Border Grid.Row="1" Height="2">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Color="{StaticResource ColorWhite}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ColorPrimaryLight}" Offset="0.5"/>
+                                    <GradientStop Color="{StaticResource ColorWhite}" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="{StaticResource ColorWhite}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ColorPrimaryLight}" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+
+                        <!-- Page Content -->
+                        <Border Grid.Row="2" Padding="0" ClipToBounds="True">
+                            <ContentPresenter Content="{TemplateBinding Content}" />
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Window.Template>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Border Background="{StaticResource ColorPrimaryBrush}">
+        <Grid>
+            <Grid.Background>
+                <SolidColorBrush Color="{StaticResource ColorWhite}"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Window deactivated Overlay -->
+            <Border Grid.RowSpan="2"
+                    Panel.ZIndex="10"
+                    Opacity="0.2">
+                <Border Background="{StaticResource ColorSecondaryBrush}"
+                        attachedProperties:AnimateFadeInProperty.Value="{Binding DimOverlayVisible}"/>
+            </Border>
+
+            <!-- Page Host -->
+            <hover:PageHost Grid.Row="0" CurrentPage="{Binding ApplicationVm.CurrentPage, Converter={converters:PageConverter}}"/>
+
+        </Grid>
+    </Border>
 </Window>
