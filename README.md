@@ -28,5 +28,8 @@ Hover Windows is built on the .NET 6.0 framework and targets Windows 10 version 
 ## Authors
 Hover Windows was developed by Thabang Mmakgatla.
 
+## Acknowledgments
+* This project includes code based on [Fasetto Word](https://github.com/angelsix/fasetto-word) by [Luke Malpass](https://github.com/angelsix/fasetto-word). All required attribution and copyright notices have been included. Special thanks Luke.
+
 ## License
 Hover Windows is licensed under the MIT license. See the LICENSE file for details.
