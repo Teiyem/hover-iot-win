@@ -1,4 +1,4 @@
-name: CI Build Hover Win Service
+name: CI Build Hover Windows
 
 on:
   push:

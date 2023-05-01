@@ -1,6 +1,8 @@
 # Hover Windows
 Hover Windows is a desktop application that provides a user-friendly interface that enables easy control and monitoring of smart home devices from a Windows device. With Hover, you can manage your connected devices from the convenience of your Windows device.
 
+[![CI Build Hover Windows](https://github.com/Teiyem/hover-iot-win/actions/workflows/hover-iot-win-ci.yml/badge.svg)](https://github.com/Teiyem/hover-iot-win/actions/workflows/hover-iot-win-ci.yml)
+
 ## Features
 * User-friendly interface for controlling and monitoring smart home devices. ⚠️
 * Real-time updates of device status.⚠️
