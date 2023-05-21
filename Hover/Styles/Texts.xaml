@@ -88,7 +88,7 @@
         <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
         <Setter Property="Padding" Value="5" />
-        <Setter Property="BorderBrush" Value="{StaticResource ColorSecondaryDark}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorSecondaryDarkBrush}" />
         <Setter Property="BorderThickness" Value="2" />
         <Setter Property="Background" Value="{StaticResource ColorPrimaryBrush}" />
         <Setter Property="Foreground" Value="{StaticResource ColorTextPrimaryBrush}" />
@@ -133,7 +133,7 @@
                                     <EventTrigger RoutedEvent="MouseEnter">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <ColorAnimation To="{StaticResource AccentColor}"
+                                                <ColorAnimation To="{StaticResource ColorAccent}"
                                                                 Duration="0:0:0.3"
                                                                 Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                             </Storyboard>
@@ -142,7 +142,7 @@
                                     <EventTrigger RoutedEvent="MouseLeave">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <ColorAnimation To="{StaticResource SecondaryDarkColor}" 
+                                                <ColorAnimation To="{StaticResource ColorSecondaryDark}" 
                                                                 Duration="0:0:0.3"
                                                                 Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                             </Storyboard>
@@ -157,7 +157,7 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource AccentColor}"
+                                        <ColorAnimation To="{StaticResource ColorAccent}"
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -166,7 +166,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource SecondaryDarkColor}" 
+                                        <ColorAnimation To="{StaticResource ColorSecondaryDark}" 
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -179,7 +179,7 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource WarnColor}"
+                                        <ColorAnimation To="{StaticResource ColorWarn}"
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -188,7 +188,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource SecondaryDarkColor}" 
+                                        <ColorAnimation To="{StaticResource ColorSecondaryDark}" 
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -208,7 +208,7 @@
         <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
         <Setter Property="Padding" Value="5" />
-        <Setter Property="BorderBrush" Value="{StaticResource ColorSecondaryDark}" />
+        <Setter Property="BorderBrush" Value="{StaticResource ColorSecondaryDarkBrush}" />
         <Setter Property="BorderThickness" Value="2" />
         <Setter Property="Background" Value="{StaticResource ColorPrimaryBrush}" />
         <Setter Property="Foreground" Value="{StaticResource ColorDisabledBrush}" />
@@ -230,7 +230,7 @@
                                 <TextBlock x:Name="input_color_holder" 
                                            Height="0" Width="0" 
                                            IsEnabled="false"
-                                           Foreground="{StaticResource ColorSecondaryDark}"
+                                           Foreground="{StaticResource ColorSecondaryDarkBrush}"
                                            IsHitTestVisible="False"/>
 
                                 <TextBlock Text="{TemplateBinding Tag}"
@@ -255,7 +255,7 @@
                                     <EventTrigger RoutedEvent="MouseEnter">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <ColorAnimation To="{StaticResource AccentColor}"
+                                                <ColorAnimation To="{StaticResource ColorAccent}"
                                                                 Duration="0:0:0.3"
                                                                 Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                             </Storyboard>
@@ -264,7 +264,7 @@
                                     <EventTrigger RoutedEvent="MouseLeave">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <ColorAnimation To="{StaticResource SecondaryDarkColor}" 
+                                                <ColorAnimation To="{StaticResource ColorSecondaryDark}" 
                                                                 Duration="0:0:0.3"
                                                                 Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                             </Storyboard>
@@ -279,7 +279,7 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource AccentColor}"
+                                        <ColorAnimation To="{StaticResource ColorAccent}"
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -288,7 +288,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource SecondaryDarkColor}" 
+                                        <ColorAnimation To="{StaticResource ColorSecondaryDark}" 
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -301,7 +301,7 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource WarnColor}"
+                                        <ColorAnimation To="{StaticResource ColorWarn}"
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>
@@ -310,7 +310,7 @@
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="{StaticResource SecondaryDarkColor}" 
+                                        <ColorAnimation To="{StaticResource ColorSecondaryDark}" 
                                                         Duration="0:0:0.3"
                                                         Storyboard.TargetName="form_input_border" Storyboard.TargetProperty="BorderBrush.Color"/>
                                     </Storyboard>

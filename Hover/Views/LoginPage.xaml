@@ -12,7 +12,6 @@
 
     <Border>
         <Grid>
-            <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <Border Background="{StaticResource ColorPrimaryBrush}" 
                             CornerRadius="10"

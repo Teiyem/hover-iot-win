@@ -14,12 +14,63 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock Text="HOME PAGE"
-                                   Foreground="{StaticResource ColorTextPrimaryBrush}"
-                                   Style="{StaticResource FormLabel}" />
+            <StackPanel>
+                <TextBlock Text="UI STUFF HERE"
+                           Foreground="{StaticResource ColorTextPrimaryBrush}"
+                           Style="{StaticResource FormLabel}" 
+                           HorizontalAlignment="Center"
+                           Margin="2"/>
 
+                <Border Height="2">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="{StaticResource ColorWhite}" Offset="0.0"/>
+                            <GradientStop Color="{StaticResource ColorPrimaryLight}" Offset="0.5"/>
+                            <GradientStop Color="{StaticResource ColorWhite}" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="{StaticResource ColorWhite}" Offset="0.0"/>
+                            <GradientStop Color="{StaticResource ColorPrimaryLight}" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </StackPanel>
+
+            <TextBlock Grid.Row="1" Text="SOME UI STUFF HERE"
+                       Foreground="{StaticResource ColorTextPrimaryBrush}"
+                       Style="{StaticResource FormLabel}" 
+                       HorizontalAlignment="Center"
+                       FontSize="60"/>
+
+
+            <StackPanel Grid.Row="2">
+                <Border Height="2">
+                    <Border.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="{StaticResource ColorWhite}" Offset="0.0"/>
+                            <GradientStop Color="{StaticResource ColorPrimaryLight}" Offset="0.5"/>
+                            <GradientStop Color="{StaticResource ColorWhite}" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="{StaticResource ColorWhite}" Offset="0.0"/>
+                            <GradientStop Color="{StaticResource ColorPrimaryLight}" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <TextBlock Text="SOME MORE UI STUFF HERE"
+                           Foreground="{StaticResource ColorTextPrimaryBrush}"
+                           Style="{StaticResource FormLabel}"
+                           HorizontalAlignment="Center"
+                           Margin="2"/>
+            </StackPanel>
 
         </Grid>
     </Border>
